@@ -23,19 +23,25 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h3 class="text-center">Login</h3>
-        <form method="POST" action="">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-    </div>
+<div class="login-container">
+
+<!--error-->
+    <?php
+        if(isset($_GET['error'])):
+    ?>
+    <?php endif?>
+    <h3 class="text-center">Login</h3>
+    <form method="POST" action="loginaction.php">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+</div>
 </body>
 </html>
